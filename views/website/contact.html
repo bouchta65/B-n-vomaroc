@@ -1,8 +1,92 @@
-@extends('layout.website')
 
-@section('title', 'Contact - BénévoMaroc')
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hhhh</title> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/hero.css">
 
-@section('content')
+</head>
+<body class="bg-gray-50">
+  <div class=" bg-[#C9559B] text-white py-2">
+    <div class="container mx-auto px-4 flex justify-between items-center text-xs sm:text-sm">
+      <div class="flex items-center space-x-2 sm:space-x-4">
+        <span><i class="fas fa-envelope mr-1 sm:mr-2"></i>contact@benevolat.org</span>
+        <span><i class="fas fa-phone mr-1 sm:mr-2"></i>+212 5 37 57 19 87</span>
+      </div>
+      <div class="flex space-x-2 sm:space-x-4">
+        <a href="#" class="hover:text-gray-200"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-gray-200"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-gray-200"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="hover:text-gray-200"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+  
+
+     <header class="bg-white navbar-shadow">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between h-16 items-center px-4">
+                <div class="flex items-center">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center ">
+                            <img src="images/logo.png" alt="BénévoMaroc Logo" class="w-10 h-10" />
+                            </div>
+                            <h1 class="text-2xl font-bold text-gray-800" style="font-family: 'ProfessionalFont', sans-serif;"><span style="color: #00B3AD;">BÉNÉVO</span><span>MAROC</span></h1>                    
+
+                        </div>
+                </div>
+                
+                <nav class="hidden md:flex space-x-6">
+                    <a href="index.html" class="text-[#C93EA1] hover:text-[#C93EA1] border-b-2 border-[#C93EA1] py-2 text-sm">Accueil</a>    
+                    <a href="views/opportunities/show.html" class="text-[#C93EA1] text-gray-600 hover:text-gray-900 py-2 text-sm">Opportunités</a>
+                    <a href="views/website/faq.blade.php" class="text-[#C93EA1] text-gray-600 hover:text-gray-900 py-2 text-sm">FAQ</a>
+                    <a href="views/website/propos.html" class="text-[#C93EA1] text-gray-600 hover:text-gray-900 py-2 text-sm">A propos</a>
+                    <a href="views/website/contact.html" class="text-[#C93EA1] text-gray-600 hover:text-gray-900 py-2 text-sm">Contact</a>
+                </nav>
+                
+                <div class="hidden md:block">
+                    <a href="views/auth/inscription.html">
+                        <button class="signup-button text-white rounded-md focus:outline-none bg-[#00B3AD] hover:bg-[#3BAFA8] transition-colors">
+                            S'inscrire 
+                        </button>
+                    </a>
+             
+                </div>
+                
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="p-1 text-gray-500 focus:outline-none">
+                        <svg id="menu-open-icon" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="menu-close-icon" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <div id="mobile-menu" class="mobile-menu md:hidden border-t border-gray-200">
+                <div class="px-4 py-2 space-y-1">
+                    <a href="#" class="block text-gray-600 hover:bg-gray-50 hover:text-gray-900 px-3 py-2 rounded-md text-base font-medium">Accueil</a>
+                    <a href="#" class="block text-gray-600 hover:bg-gray-50 hover:text-gray-900 px-3 py-2 rounded-md text-base font-medium">Opportunités</a>
+                    <a href="#" class="block text-gray-600 hover:bg-gray-50 hover:text-gray-900 px-3 py-2 rounded-md text-base font-medium">FAQ</a>
+                    <a href="#" class="block text-gray-600 hover:bg-gray-50 hover:text-gray-900 px-3 py-2 rounded-md text-base font-medium">A propos</a>
+                    <a href="#" class="block text-gray-600 hover:bg-gray-50 hover:text-gray-900 px-3 py-2 rounded-md text-base font-medium">Contact</a>
+                </div>
+                <div class="px-4 py-3">
+                    <button class="w-full signup-button text-white rounded-md focus:outline-none hover:bg-blue-700 transition-colors">
+                        S'inscrire
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
 <div class="bg-gray-50 min-h-screen">
     <!-- Hero Section -->
     <div class="relative bg-[#00B3AD] text-white py-16">
